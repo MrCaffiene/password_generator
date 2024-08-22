@@ -1,0 +1,47 @@
+
+import './App.css'
+
+function App() {
+
+  const handleInput = (first) => { second }
+
+  return (
+    <>
+      <div className='bg-orange-600 h-screen'>
+        <div className="app">
+          <h1 className='text-center text-[3rem] text-black'>Password Generator</h1>
+          <div className='flex flex-col justify-center items-center  min-h-[60vh]'>
+            <div className='bg-black  flex justify-center'>
+              {/* input */}
+              <input className='rounded-sm min-w-[40vw] pl-2 bg-gray-300' type="text" placeholder='psswd' onChange={handleInput} />
+              {/* copy button */}
+              <button className='text-white m-3 p-2 rounded-lg'>Copy</button>
+            </div>
+            {/* options */}
+            <div className='bg-red-800 min-w-full min-h-[20vh] flex flex-col items-center mt-6 p-2 gap-3'>
+              <div>
+                <button name='regenerate button' className='bg-black text-white p-2 rounded-full'>
+                  Regenerate</button>
+              </div>
+              <div>
+                <label className='font-black p-2 m-2' htmlFor="psswdlength">label</label>
+                <input type="range" id="psswdlength" name="psswdlength" min="3" max="120" />
+              </div>
+              <div>
+                <label className='font-black p-2 m-2' htmlFor="Nums" >Numbers</label>
+                <input type="checkbox" name="Nums" id="Nums"  />
+              </div>
+              <div>
+                <label className='font-black p-2 m-2' htmlFor="chkbox" >Special characters</label>
+                <input type="checkbox" name="SplChar" id="SplChar"  />
+              </div>
+            </div>
+            {/* options end */}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default App
